@@ -55,7 +55,32 @@ Before installing Claude Token Monitor, make sure you have:
 1. Go to the [Releases page](../../releases)
 2. Download the `.dmg` file for macOS
 3. Open the DMG file and drag the app to Applications folder
-4. Launch Claude Token Monitor from Applications
+4. **Important**: When you first launch the app, you may see a security warning from macOS Gatekeeper
+5. Follow the steps below to allow the app to run
+
+#### 🔐 macOS Security Warning Fix
+
+If you see the message *"Apple cannot check it for malicious software"*, follow these steps:
+
+**Method 1: System Preferences (Recommended)**
+1. Open **System Preferences** → **Privacy & Security**
+2. Look for the message about "Claude Token Monitor" being blocked
+3. Click **"Open Anyway"**
+4. Confirm when prompted
+
+**Method 2: Right-click Method**
+1. Right-click on the app in Applications folder
+2. Select **"Open"** from the context menu
+3. Click **"Open"** when the security dialog appears
+
+**Method 3: Terminal Method**
+```bash
+sudo xattr -rd com.apple.quarantine "/Applications/Claude Token Monitor.app"
+```
+
+After completing any of these methods, the app will launch normally in the future.
+
+5. Launch Claude Token Monitor from Applications
 
 ### System Requirements
 

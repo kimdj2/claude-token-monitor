@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Claude Token Monitor",
-  "version": "0.1.1",
-  "identifier": "com.claude-token-monitor.app",
+  "version": "0.1.2",
+  "identifier": "com.kimdj2.claude-token-monitor",
   "build": {
     "beforeDevCommand": "pnpm dev",
     "devUrl": "http://localhost:1420",

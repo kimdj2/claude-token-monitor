@@ -56,8 +56,6 @@ jobs:
         with:
           targets: aarch64-apple-darwin,x86_64-apple-darwin
 
-
-
       - name: install pnpm
         run: npm install -g pnpm
 

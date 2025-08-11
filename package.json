@@ -1,6 +1,6 @@
 {
   "name": "claude-token-monitor",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A sleek desktop application for monitoring Claude token usage in real-time",
   "type": "module",
   "scripts": {
