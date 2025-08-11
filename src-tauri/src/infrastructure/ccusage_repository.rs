@@ -102,15 +102,15 @@ impl CcusageRepository {
   fn find_node_and_ccusage_paths(&self) -> Result<(String, String), String> {
     let home_dir = std::env::var("HOME").map_err(|_| "Could not get HOME directory")?;
 
-    // Node.js 경로 후보들
+    // Node.js path candidates
     let mut node_candidates = vec![
       "/opt/homebrew/bin/node".to_string(),  // Homebrew Apple Silicon
-      "/usr/local/bin/node".to_string(),     // Homebrew Intel, 공식 설치
+      "/usr/local/bin/node".to_string(),     // Homebrew Intel, official install
       format!("{}/.volta/bin/node", home_dir), // Volta
       "/usr/bin/node".to_string(),           // System
     ];
 
-    // nvm 설치 경로들 동적으로 추가
+    // Dynamically add nvm installation paths
     if let Ok(entries) = std::fs::read_dir(format!("{}/.nvm/versions/node", home_dir)) {
       for entry in entries.flatten() {
         if let Ok(file_name) = entry.file_name().into_string() {
@@ -119,7 +119,7 @@ impl CcusageRepository {
       }
     }
 
-    // fnm 설치 경로들 동적으로 추가
+    // Dynamically add fnm installation paths
     if let Ok(entries) = std::fs::read_dir(format!("{}/.local/share/fnm/node-versions", home_dir)) {
       for entry in entries.flatten() {
         if let Ok(file_name) = entry.file_name().into_string() {
@@ -128,7 +128,7 @@ impl CcusageRepository {
       }
     }
 
-    // asdf 설치 경로들 동적으로 추가
+    // Dynamically add asdf installation paths
     if let Ok(entries) = std::fs::read_dir(format!("{}/.asdf/installs/nodejs", home_dir)) {
       for entry in entries.flatten() {
         if let Ok(file_name) = entry.file_name().into_string() {
@@ -137,7 +137,7 @@ impl CcusageRepository {
       }
     }
 
-    // ccusage 경로 후보들
+    // ccusage path candidates
     let ccusage_candidates = vec![
       "/opt/homebrew/bin/ccusage".to_string(),  // Homebrew Apple Silicon
       "/usr/local/bin/ccusage".to_string(),     // Homebrew Intel, npm global
@@ -145,7 +145,7 @@ impl CcusageRepository {
       format!("{}/.local/share/pnpm/ccusage", home_dir), // pnpm global
     ];
 
-    // Node.js 경로 찾기
+    // Find Node.js path
     let node_path = if let Ok(node_env) = std::env::var("NODE_PATH") {
       println!("🔍 Using NODE_PATH environment variable: {}", node_env);
       node_env
@@ -164,7 +164,7 @@ impl CcusageRepository {
       found_node
     };
 
-    // ccusage 경로 찾기
+    // Find ccusage path
     let ccusage_path = if let Ok(ccusage_env) = std::env::var("CCUSAGE_PATH") {
       println!("🔍 Using CCUSAGE_PATH environment variable: {}", ccusage_env);
       ccusage_env
@@ -190,7 +190,7 @@ impl CcusageRepository {
   fn create_command_with_env(&self, ccusage_path: &str, node_path: &str) -> Command {
     let mut cmd = Command::new(ccusage_path);
 
-    // 동적으로 찾은 경로들을 포함한 PATH 구성
+    // Configure PATH including dynamically found paths
     let current_path = std::env::var("PATH").unwrap_or_default();
     let node_pathbuf = PathBuf::from(node_path);
     let node_dir = node_pathbuf.parent()
