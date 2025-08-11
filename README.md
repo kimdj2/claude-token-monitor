@@ -7,6 +7,9 @@ A sleek, lightweight desktop application for monitoring your Claude token usage 
 ![Tauri](https://img.shields.io/badge/Tauri-v2.0-orange)
 ![Svelte](https://img.shields.io/badge/Svelte-5.0-red)
 
+<img width="401" height="581" alt="スクリーンショット 2025-08-11 21 43 33" src="https://github.com/user-attachments/assets/d7164aba-cb48-46bf-b171-89f3a97a0b42" />
+
+
 ## ✨ Features
 
 - **Real-time Monitoring**: Track your Claude token usage as you work
