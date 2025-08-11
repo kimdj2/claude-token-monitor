@@ -63,16 +63,7 @@ This script automatically:
 - Installs ccusage dependency
 - Launches the app
 
-#### **Method 2: Homebrew Cask**
-```bash
-# Add the tap (coming soon)
-brew tap kimdj2/claude-token-monitor
-
-# Install the app
-brew install --cask claude-token-monitor
-```
-
-#### **Method 3: Manual Download**
+#### **Method 2: Manual Download**
 
 1. Go to the [Releases page](../../releases)
 2. Download the `.dmg` file for macOS
