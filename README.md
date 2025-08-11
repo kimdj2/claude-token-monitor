@@ -44,9 +44,11 @@ Before installing Claude Token Monitor, make sure you have:
    npm install -g ccusage
    ```
 
-2. **Claude Code extension** for VS Code/Cursor
-   - Install from VS Code marketplace
-   - Configure your Claude API key
+2. **Active Claude usage** from any source
+   - Claude.ai web interface
+   - Claude API integrations
+   - VS Code/Cursor extensions
+   - Any application that uses Claude services
 
 ## 🚀 Installation
 
@@ -113,7 +115,7 @@ After completing any of these methods, the app will launch normally in the futur
 
 - **macOS 10.15** or later
 - **Node.js 18+** (for ccusage dependency)
-- **Claude Code extension** for VS Code/Cursor
+- **Active Claude usage** (web, API, or extensions)
 
 ## 🔧 Usage
 

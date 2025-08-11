@@ -237,7 +237,7 @@ main() {
         echo -e "${YELLOW}📋 What's next:${NC}"
         echo "• Look for the Claude Token Monitor icon in your menu bar"
         echo "• Click the tray icon to view your token usage"
-        echo "• Make sure Claude Code extension is installed in VS Code/Cursor"
+        echo "• Use Claude from any source (web, API, or extensions) to see usage data"
         echo ""
         
         # Ask if user wants to launch the app

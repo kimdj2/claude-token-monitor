@@ -125,7 +125,7 @@ if open "$APP_PATH"; then
     echo "• Look for the app icon in your menu bar"
     echo "• Click the tray icon to view token usage"
     echo "• Right-click for refresh and quit options"
-    echo "• Make sure Claude Code extension is installed in VS Code/Cursor"
+    echo "• Use Claude from any source (web, API, or extensions) to see usage data"
 else
     echo -e "${RED}❌ Failed to launch ${APP_NAME}${NC}"
     echo ""

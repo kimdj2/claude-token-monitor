@@ -79,7 +79,7 @@ if command -v gh &> /dev/null; then
 ### 📋 Requirements
 - macOS 10.15 or later
 - Node.js 18+ (for ccusage)
-- Claude Code extension for VS Code/Cursor
+- Active Claude usage from any source
 
 ### 🐛 Issues?
 If you encounter any problems, please [report them here](../../issues)."
