@@ -50,7 +50,29 @@ Before installing Claude Token Monitor, make sure you have:
 
 ## 🚀 Installation
 
-### Download from Releases
+### 🚀 Easy Install Methods
+
+#### **Method 1: One-Click Installer (Recommended)**
+```bash
+curl -fsSL https://raw.githubusercontent.com/kimdj2/claude-token-monitor/main/scripts/one-click-install.sh | bash
+```
+This script automatically:
+- Downloads the latest version
+- Installs the app to Applications
+- Removes security restrictions
+- Installs ccusage dependency
+- Launches the app
+
+#### **Method 2: Homebrew Cask**
+```bash
+# Add the tap (coming soon)
+brew tap kimdj2/claude-token-monitor
+
+# Install the app
+brew install --cask claude-token-monitor
+```
+
+#### **Method 3: Manual Download**
 
 1. Go to the [Releases page](../../releases)
 2. Download the `.dmg` file for macOS
@@ -58,29 +80,34 @@ Before installing Claude Token Monitor, make sure you have:
 4. **Important**: When you first launch the app, you may see a security warning from macOS Gatekeeper
 5. Follow the steps below to allow the app to run
 
-#### 🔐 macOS Security Warning Fix
+##### 🔐 macOS Security Warning Fix
 
 If you see the message *"Apple cannot check it for malicious software"*, follow these steps:
 
-**Method 1: System Preferences (Recommended)**
+**Option A: Automated Fix**
+```bash
+curl -fsSL https://raw.githubusercontent.com/kimdj2/claude-token-monitor/main/scripts/install-claude-token-monitor.sh | bash
+```
+
+**Option B: System Preferences (Manual)**
 1. Open **System Preferences** → **Privacy & Security**
 2. Look for the message about "Claude Token Monitor" being blocked
 3. Click **"Open Anyway"**
 4. Confirm when prompted
 
-**Method 2: Right-click Method**
+**Option C: Right-click Method**
 1. Right-click on the app in Applications folder
 2. Select **"Open"** from the context menu
 3. Click **"Open"** when the security dialog appears
 
-**Method 3: Terminal Method**
+**Option D: Terminal Method**
 ```bash
 sudo xattr -rd com.apple.quarantine "/Applications/Claude Token Monitor.app"
 ```
 
 After completing any of these methods, the app will launch normally in the future.
 
-5. Launch Claude Token Monitor from Applications
+6. Launch Claude Token Monitor from Applications
 
 ### System Requirements
 

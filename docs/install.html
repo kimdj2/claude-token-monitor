@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Token Monitor - Easy Install</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .install-methods {
+            margin: 30px 0;
+        }
+        
+        .method {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .method:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .method.recommended {
+            background: linear-gradient(135deg, #667eea10, #764ba210);
+            border-color: #667eea;
+        }
+        
+        .method-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .method-title .badge {
+            background: #667eea;
+            color: white;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            margin-left: 10px;
+        }
+        
+        .method-desc {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .install-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .install-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        .steps {
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            color: #333;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .success {
+            background: #d1edff;
+            border: 1px solid #74b9ff;
+            color: #0984e3;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📊</div>
+            <h1>Claude Token Monitor</h1>
+            <p class="subtitle">Easy Installation for macOS</p>
+        </div>
+        
+        <div class="install-methods">
+            <!-- Method 1: One-Click -->
+            <div class="method recommended">
+                <div class="method-title">
+                    🚀 One-Click Installer
+                    <span class="badge">Recommended</span>
+                </div>
+                <p class="method-desc">
+                    Automatically downloads, installs, and configures everything you need.
+                    No manual steps required!
+                </p>
+                <button class="install-btn" onclick="copyToClipboard('oneclick')">
+                    Copy Install Command
+                </button>
+                <div class="code-block" id="oneclick-code" style="display: none;">
+                    curl -fsSL https://raw.githubusercontent.com/kimdj2/claude-token-monitor/main/scripts/one-click-install.sh | bash
+                </div>
+            </div>
+            
+            <!-- Method 2: Manual -->
+            <div class="method">
+                <div class="method-title">
+                    📥 Manual Installation
+                </div>
+                <p class="method-desc">
+                    Download the DMG file and follow step-by-step instructions.
+                </p>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <a href="https://github.com/kimdj2/claude-token-monitor/releases/latest" target="_blank">
+                                Download the latest DMG file
+                            </a>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">Open the DMG and drag the app to Applications</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <button class="install-btn" onclick="copyToClipboard('security')">
+                                Copy Security Fix Command
+                            </button>
+                            <div class="code-block" id="security-code" style="display: none;">
+                                curl -fsSL https://raw.githubusercontent.com/kimdj2/claude-token-monitor/main/scripts/install-claude-token-monitor.sh | bash
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="warning">
+            <strong>⚠️ Security Notice:</strong> You may see a macOS security warning. 
+            This is normal for apps not notarized through Apple. Our install scripts 
+            automatically handle this for you.
+        </div>
+        
+        <div class="success">
+            <strong>✅ After Installation:</strong>
+            <ul style="margin: 10px 0 0 20px;">
+                <li>Look for the app icon in your menu bar</li>
+                <li>Click the tray icon to view token usage</li>
+                <li>Make sure Claude Code extension is installed in VS Code/Cursor</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            Need help? Check out the 
+            <a href="https://github.com/kimdj2/claude-token-monitor" target="_blank">GitHub repository</a> 
+            or 
+            <a href="https://github.com/kimdj2/claude-token-monitor/issues" target="_blank">report an issue</a>.
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard(type) {
+            const code = document.getElementById(type + '-code');
+            const text = code.textContent.trim();
+            
+            navigator.clipboard.writeText(text).then(() => {
+                // Show the code block
+                code.style.display = 'block';
+                
+                // Change button text temporarily
+                const btn = code.previousElementSibling;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copied! Run in Terminal';
+                btn.style.background = '#00b894';
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 3000);
+            }).catch(() => {
+                // Fallback: just show the code
+                code.style.display = 'block';
+                alert('Copy the command below and paste it into your Terminal');
+            });
+        }
+        
+        // Show recommended method code by default
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('oneclick-code').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
