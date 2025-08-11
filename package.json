@@ -1,0 +1,52 @@
+{
+  "name": "claude-token-monitor",
+  "version": "0.1.1",
+  "description": "A sleek desktop application for monitoring Claude token usage in real-time",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "tauri": "tauri"
+  },
+  "license": "MIT",
+  "author": "kimdj2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimdj2/claude-token-monitor.git"
+  },
+  "keywords": [
+    "claude",
+    "token",
+    "monitor",
+    "desktop",
+    "tauri",
+    "svelte",
+    "api-usage"
+  ],
+  "dependencies": {
+    "@tauri-apps/api": "2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/adapter-static": "^3.0.9",
+    "@sveltejs/kit": "^2.5.4",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0",
+    "@tauri-apps/cli": "2.0.0-rc.8",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-svelte": "^3.11.0",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "svelte-eslint-parser": "^1.3.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6"
+  }
+}
