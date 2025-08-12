@@ -52,61 +52,9 @@ Before installing Claude Token Monitor, make sure you have:
 
 ## 🚀 Installation
 
-### 🚀 Easy Install Methods
-
-#### **Method 1: One-Click Installer (Recommended)**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/kimdj2/claude-token-monitor/main/scripts/one-click-install.sh | bash
 ```
-This script automatically:
-- Downloads the latest version
-- Installs the app to Applications
-- Removes security restrictions
-- Installs ccusage dependency
-- Launches the app
-
-#### **Method 2: Manual Download**
-
-1. Go to the [Releases page](../../releases)
-2. Download the `.dmg` file for macOS
-3. Open the DMG file and drag the app to Applications folder
-4. **Important**: When you first launch the app, you may see a security warning from macOS Gatekeeper
-5. Follow the steps below to allow the app to run
-
-##### 🔐 macOS Security Warning Fix
-
-If you see the message *"Apple cannot check it for malicious software"*, follow these steps:
-
-**Option A: Automated Fix**
-```bash
-curl -fsSL https://raw.githubusercontent.com/kimdj2/claude-token-monitor/main/scripts/install-claude-token-monitor.sh | bash
-```
-
-**Option B: System Preferences (Manual)**
-1. Open **System Preferences** → **Privacy & Security**
-2. Look for the message about "Claude Token Monitor" being blocked
-3. Click **"Open Anyway"**
-4. Confirm when prompted
-
-**Option C: Right-click Method**
-1. Right-click on the app in Applications folder
-2. Select **"Open"** from the context menu
-3. Click **"Open"** when the security dialog appears
-
-**Option D: Terminal Method**
-```bash
-sudo xattr -rd com.apple.quarantine "/Applications/Claude Token Monitor.app"
-```
-
-After completing any of these methods, the app will launch normally in the future.
-
-6. Launch Claude Token Monitor from Applications
-
-### System Requirements
-
-- **macOS 10.15** or later
-- **Node.js 18+** (for ccusage dependency)
-- **Active Claude usage** (web, API, or extensions)
 
 ## 🔧 Usage
 
@@ -230,7 +178,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 - [Tauri](https://tauri.app) for the amazing desktop app framework
 - [Svelte](https://svelte.dev) for the reactive UI framework
-- [ccusage](https://github.com/ccusage) for Claude usage tracking
+- [ccusage](https://github.com/ryoppippi/ccusage) for Claude usage tracking
 - The Claude API team for providing the usage data
 
 ## 📞 Support
